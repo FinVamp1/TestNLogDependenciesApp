@@ -29,7 +29,7 @@ namespace TestNLogDependenciesApp
 
         private ILogger GetLogger()
         {
-            var configFile = new NLog.Config.XmlLoggingConfiguration(".\\Nlog.config");
+            var configFile = new NLog.Config.XmlLoggingConfiguration("D:\\home\\site\\wwwroot\\Nlog.config");
             var factory = new NLog.LogFactory(configFile);
             NLogLoggerProvider provider = new NLogLoggerProvider(new NLogProviderOptions(), factory);
             return provider.CreateLogger(ATFLoggerName);
